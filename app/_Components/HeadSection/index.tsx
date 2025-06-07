@@ -89,7 +89,7 @@ const HeadSection = () => {
         <div className="main_container">
           <div className={styles.support_box}>
             {supportItems.map((item, index) => (
-              <div className={styles.support_box_item}>
+              <div key={index} className={styles.support_box_item}>
                 <div className={styles.support_box_frame}>{item.icon}</div>
                 <div className={styles.support_box_titles}>
                   <h3>{item.title}</h3>

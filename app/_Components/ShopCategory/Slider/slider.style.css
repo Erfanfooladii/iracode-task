@@ -1,0 +1,89 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-slide:hover > img {
+  transition: ease-in-out all 300ms;
+  transform: scale(1);
+}
+.swiper:hover > .swiper-button-next {
+  opacity: 1;
+  right: 25px;
+  transition: all 0.3s ease-in-out;
+}
+.swiper:hover > .swiper-button-prev {
+  opacity: 1;
+  left: 25px;
+  transition: all 0.3s ease-in-out;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  transition-duration: 300ms;
+  transition: opacity 0.3s ease-in-out;
+}
+.swiper-button-prev::after {
+  font-size: 20px;
+}
+.swiper-button-next::after {
+  font-size: 20px;
+}
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.swiper-custom-bullet::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.swiper-pagination-bullet-active {
+  border: 1px solid #777;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  transition: ease-in-out;
+  transition-duration: 200ms;
+}
+
+.swiper-custom-bullet-active {
+  background-color: #777;
+}
